@@ -1,0 +1,31 @@
+{
+  "name": "comp5521-lab8-stablecoin-rwa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A 60-minute observation lab on collateralized stablecoins, liquidation, and ERC-4626 RWA collateral.",
+  "engines": {
+    "node": "^22.13.0 || ^24.0.0 || ^26.0.0"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:lab": "hardhat test mocha test/01-cdp.test.js test/02-rwa.test.js",
+    "test:core": "hardhat test mocha test/01-cdp.test.js",
+    "test:rwa": "hardhat test mocha test/02-rwa.test.js",
+    "test:guards": "hardhat test mocha test/03-guards.test.js",
+    "demo": "hardhat run scripts/demo.js",
+    "check": "npm run compile && npm test"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "4.2.2",
+    "@nomicfoundation/hardhat-ethers-chai-matchers": "3.0.13",
+    "@nomicfoundation/hardhat-mocha": "4.0.1",
+    "@openzeppelin/contracts": "5.6.1",
+    "chai": "6.3.0",
+    "ethers": "6.17.0",
+    "hardhat": "3.21.2",
+    "mocha": "12.0.3",
+    "solc": "0.8.30"
+  }
+}
